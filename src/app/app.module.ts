@@ -8,7 +8,7 @@ import { AppComponent } from './components/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { TimetableComponent } from './components/timetable/timetable.component';
-import { MapToItarablePipe } from './pipes/map-to-itarable.pipe';
+import { MapToItarablePipe } from './pipes/map-to-itarable/map-to-itarable.pipe';
 import { LessonComponent } from './components/lesson/lesson.component';
 
 @NgModule({
