@@ -10,24 +10,25 @@ export class ApiService {
 
 
   getGroups() {
-    return this.http.get('http://api.rozklad.org.ua/v2/groups')
+    return this.http.get('https://api.rozklad.org.ua/v2/groups')
       .map(res => res.json().data);
   }
 
   searchGroup(query: string) {
     return this.http
-      .get(`http://api.rozklad.hub.kpi.ua/groups/?search=${query}`)
+      .get(`https://api.rozklad.hub.kpi.ua/groups/?search=${query}`)
       .map(res => res.json().results);
   }
 
   setCurrentGroup(groupId: number): void {
     this.http
-      .get(`http://api.rozklad.hub.kpi.ua/groups/${groupId}/timetable`)
+      .get(`https://api.rozklad.hub.kpi.ua/groups/${groupId}/timetable`)
       .map((data) => data.json().data)
       .subscribe((data) => {
         console.log('new data');
-        if (this.timetableObserver)
+        if (this.timetableObserver) {
           this.timetableObserver.next(data);
+        }
       });
   }
 
