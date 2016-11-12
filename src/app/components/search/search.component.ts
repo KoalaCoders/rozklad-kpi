@@ -32,7 +32,6 @@ export class SearchComponent implements OnInit {
     this.showGroups = e.target.value.length;
     this.api.searchGroup(e.target.value)
       .subscribe((groups) => {
-        console.log(groups);
         this.groups = groups;
       });
   }
@@ -42,7 +41,6 @@ export class SearchComponent implements OnInit {
     localStorage.setItem('koalaRozkladKPI', JSON.stringify(group));
     this.currentGroup = group.name;
     this.api.setCurrentGroup(group.id);
-    console.log(group);
   }
 
   hideGroups() {
