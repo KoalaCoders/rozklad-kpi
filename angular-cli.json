@@ -18,7 +18,7 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.scss"
       ],
       "scripts": [],
       "environments": {
@@ -41,10 +41,10 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
-    "prefixInterfaces": false,
+    "styleExt": "scss",
+    "prefixInterfaces": true,
     "inline": {
-      "style": false,
+      "style": true,
       "template": false
     },
     "spec": {

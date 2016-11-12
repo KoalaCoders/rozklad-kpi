@@ -1,0 +1,17 @@
+.timetable {
+  border-collapse: collapse;
+  .header {
+    font-weight: 900;
+    text-align: center;
+    background-color: #eee;
+    padding: 10px;
+  }
+  .item {
+    vertical-align: top;
+    border: 1px solid #eee;
+    width: 16.5%;
+    border-collapse: collapse;
+
+  }
+
+}
